@@ -1,0 +1,36 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<br>
+
+ <nav aria-label="Page navigation example">
+ <ul class="pagination justify-content-center d-flex">
+  
+  <%if (rowsPerPage<rowNumber) {%>
+  
+  <li class="page-item">
+  	<%if(pageIndex>2){%>
+        <A class="page-link"  href="<%=request.getRequestURI()%>?whichPage=1">至第一頁</A>
+    <%}%>
+  </li>
+  
+  <li class="page-item">
+  <FORM METHOD="post" ACTION="<%=request.getRequestURI()%>" class="d-flex"> 
+  	<%for (int i=1; i<=pageNumber; i++){%>
+        <a class="page-link" href="<%=request.getRequestURI()%>?whichPage=<%=i%>"><%=i%></a>
+    <%}%>  
+    </FORM>	
+  </li>
+  
+  <li class="page-item">
+    <%if(pageIndex<pageIndexArray[pageNumber-1]){%>
+        <A class="page-link"  href="<%=request.getRequestURI()%>?whichPage=<%=pageNumber%>">至最後一頁</A>
+    <%}%>
+  </li>  
+  <%}%>  
+
+  </ul>
+</nav>
+
+
+
+
+  

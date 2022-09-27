@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
+    <div class="deznav">
+		<div class="deznav-scroll">
+			<ul class="metismenu" id="menu">
+				
+
+				<li>
+					<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+						<i class='bx bxs-hotel'></i>
+						<span class="nav-text">廠商管理</span>
+					</a>
+					<ul aria-expanded="false">
+						<li><a href="<%=request.getContextPath()%>/frontend/store/storeListOwn.jsp">資料修改</a></li>
+						<li><a href="<%=request.getContextPath()%>/frontend/store/rmMsgList.jsp" aria-expanded="false">廠商檢舉管理</a></li>
+						<li><a href="<%=request.getContextPath()%>/backend/listAllOrder.jsp">訂房訂單查詢</a></li>
+						<li><a href="javascript:void()" aria-expanded="false">廠商通知訊息</a></li>
+					</ul>
+				</li>
+
+
+
+				<li>
+					<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+						<i class='bx bxs-message'></i>
+						<span class="nav-text">客服管理</span>
+					</a>
+					<ul aria-expanded="false">
+						<li><a href="<%=request.getContextPath()%>/frontend/customer_service/storeChat.jsp"">即時客服</a></li>
+					</ul>
+				</li>
+				
+				<li>
+					<a class=" ai-icon" aria-expanded="false" href="<%=request.getContextPath()%>/store.do?action=logOut">
+						<i class='bx bxs-hotel'></i>
+						<span class="nav-text">登出</span>
+					</a>
+
+				</li>
+			</ul>
+		</div>
+	</div>

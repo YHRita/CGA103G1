@@ -1,0 +1,104 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
+    <div class="deznav">
+		<div class="deznav-scroll">
+			<ul class="metismenu" id="menu">
+				<li>
+					<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+						<i class='bx bxs-user-circle'></i>
+						<span class="nav-text">員工管理</span>
+					</a>
+					<ul aria-expanded="false">
+						<li><a href="<%=request.getContextPath()%>/backend/emp/listAllEmp.jsp">員工列表</a></li>
+						<li><a href="<%=request.getContextPath()%>/backend/emp/addEmp.jsp">新增員工</a></li>
+						<li><a class="has-arrow" href="javascript:void()" aria-expanded="false">權限管理</a>
+							<ul aria-expanded="false">
+								<li><a href="<%=request.getContextPath()%>/backend/authfun/listAllAuthFun.jsp">所有權限列表</a></li>
+								<li><a href="<%=request.getContextPath()%>/backend/auth/listAllAuth.jsp">員工權限列表</a></li>
+							</ul>
+					</ul>
+				</li>
+				<li>
+					<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+						<i class='bx bxs-group'></i>
+						<span class="nav-text">會員管理</span>
+					</a>
+					<ul aria-expanded="false">
+						<li><a href="<%=request.getContextPath()%>/backend/mem/listMemPage.jsp">會員列表</a></li>
+					</ul>
+				</li>
+				<li>
+					<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+						<i class='bx bxs-hotel'></i>
+						<span class="nav-text">廠商管理</span>
+					</a>
+					<ul aria-expanded="false">
+						<li><a href="<%=request.getContextPath()%>/backend/store/storeSelectPage.jsp">廠商查詢主頁</a></li>
+						<li><a href="<%=request.getContextPath()%>/backend/store/storeListAll.jsp">廠商列表</a></li>
+						<li><a href="<%=request.getContextPath()%>/backend/store/storeSurvyList.jsp">審核廠商</a></li>
+						<li><a href="<%=request.getContextPath()%>/backend/store/ListAllMsg.jsp" aria-expanded="false">廠商檢舉管理</a></li>
+						<li><a href="<%=request.getContextPath()%>/backend/store/listAllOrder.jsp">訂房訂單查詢</a></li>
+					</ul>
+				</li>
+				<li>
+					<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+						<i class='bx bxs-tree'></i>
+						<span class="nav-text">商城管理</span>
+					</a>
+					<ul aria-expanded="false">
+						<li><a href="<%=request.getContextPath()%>/backend/tkt_order/listAllTktOrder.jsp">訂單列表</a></li>
+						<li><a href="<%=request.getContextPath()%>/backend/tkt/listAllTkt.jsp">票卷列表</a></li>
+						<li><a class="has-arrow" href="javascript:void()" aria-expanded="false">優惠劵管理</a>
+							<ul aria-expanded="false">
+								<li><a href="<%=request.getContextPath()%>/backend/coup/listAllCoup.jsp">優惠劵列表</a></li>
+								<li><a href="<%=request.getContextPath()%>/backend/mem_coup/listSendMemCoup.jsp">發放優惠劵</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+						<i class='bx bxs-map'></i>
+						<span class="nav-text">揪團活動管理</span>
+					</a>
+					<ul aria-expanded="false">
+						<li><a href="<%=request.getContextPath()%>/backend/act_rp/allActRp.jsp">活動檢舉管理</a></li>
+					</ul>
+				</li>
+				<li>
+					<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+						<i class='bx bxs-tree'></i>
+						<span class="nav-text">網頁管理</span>
+					</a>
+					<ul aria-expanded="false">
+						<li><a class="has-arrow" href="javascript:void()" aria-expanded="false">討論區管理</a>
+							<ul aria-expanded="false">
+								<li><a href="<%=request.getContextPath()%>/activity/ActivityClass?action=getAllActClass">文章列表</a></li>
+								<li><a href="<%=request.getContextPath()%>/activity/ActivityClass?action=getAllActClass">文章檢舉管理</a></li>
+							</ul>
+						</li>
+						<li><a class="has-arrow" href="javascript:void()" aria-expanded="false">最新消息管理</a>
+							<ul aria-expanded="false">
+								<li><a href="<%=request.getContextPath()%>/backend/last_news/lastNews.jsp">消息列表</a></li>
+								<li><a href="<%=request.getContextPath()%>/backend/last_news/addNews.jsp">新增消息</a></li>
+							</ul>
+						</li>
+						<li><a class="has-arrow" href="javascript:void()" aria-expanded="false">系統消息管理</a>
+							<ul aria-expanded="false">
+								<li><a href="<%=request.getContextPath()%>/backend/system_notification_message/listSNM.jsp">系統消息列表</a></li>
+								<li><a href="<%=request.getContextPath()%>/backend/system_notification_message/addSNM.jsp">新增系統消息</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+						<i class='bx bxs-message'></i>
+						<span class="nav-text">客服管理</span>
+					</a>
+					<ul aria-expanded="false">
+						<li><a href="<%=request.getContextPath()%>/backend/customer_service/backChat.jsp"">即時客服</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>

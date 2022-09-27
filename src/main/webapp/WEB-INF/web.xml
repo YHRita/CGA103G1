@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" 
+id="WebApp_ID" version="4.0">
+
+<!-- 如果 4.0 版本報錯，但 Run Web 沒問題，想讓紅線消失，可以選擇換回 3.0版本 -->
+<!-- 或將 XML Validation 取消，4.0 報錯原因不知 -->
+<!-- <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" -->
+<!-- xmlns="http://java.sun.com/xml/ns/javaee" -->
+<!-- xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" -->
+<!-- id="WebApp_ID" version="3.0"> -->
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+	
+	<!-- 	會員如果未登入，要求該使用者登入 ，範例 尚未修改-->
+	<filter>
+		<filter-name>MemberFilter</filter-name>
+		<filter-class>com.filters.MemberFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>MemberFilter</filter-name>
+		<url-pattern>/frontend/memPage.jsp</url-pattern>
+<!-- 		<url-pattern>/tktOrder/addTktOrd.do</url-pattern> -->
+		<url-pattern>/frontend/listMemOrder.jsp</url-pattern>
+		<url-pattern>/frontend/listStoreOrder.jsp</url-pattern>
+		<url-pattern>/frontend/act/*</url-pattern>
+		<url-pattern>/frontend/ac/*</url-pattern>
+		<url-pattern>/frontend/rmDetail.jsp</url-pattern>
+		<!-- <url-pattern>/frontend/cart/*</url-pattern>
+		<url-pattern>/frontend/tkt/*</url-pattern> -->
+<!-- 		<url-pattern>/RmRsv/RmRsv.do</url-pattern> -->
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+		<dispatcher>ASYNC</dispatcher>
+	</filter-mapping>
+
+	<!-- 以下是廠商會員登入 -->
+	<filter>
+		<filter-name>StoreLoginFilter</filter-name>
+		<filter-class>com.filters.StoreLoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>StoreLoginFilter</filter-name>
+		<url-pattern>/frontend/store/storeUpdateFrontend.jsp</url-pattern>
+		<url-pattern>/frontend/store/storeListOwn.jsp</url-pattern>
+		<url-pattern>/frontend/store/storeFrontendPage.jsp</url-pattern>
+		<url-pattern>/frontend/store/rmMsgList.jsp</url-pattern>
+		<url-pattern>/frontend/room/rmWork.jsp</url-pattern>
+			<dispatcher>REQUEST</dispatcher>
+			<dispatcher>FORWARD</dispatcher>
+			<dispatcher>INCLUDE</dispatcher>
+			<dispatcher>ERROR</dispatcher>
+			<dispatcher>ASYNC</dispatcher>
+	</filter-mapping>
+
+</web-app>

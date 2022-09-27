@@ -1,0 +1,16 @@
+    <script src="<%=request.getContextPath()%>/backend/assets/vendor/global/global.min.js"></script>
+    <script src="<%=request.getContextPath()%>/backend/assets/vendor/chart.js/Chart.bundle.min.js"></script>
+    <script src="<%=request.getContextPath()%>/backend/assets/vendor/peity/jquery.peity.min.js"></script>
+    <script src="<%=request.getContextPath()%>/backend/assets/vendor/apexchart/apexchart.js"></script>
+    <script src="<%=request.getContextPath()%>/backend/assets/vendor/bootstrap-datetimepicker/js/moment.js"></script>
+    <script src="<%=request.getContextPath()%>/backend/assets/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="<%=request.getContextPath()%>/backend/assets/js/plugins-init/datatables.init.js"></script>
+	<script src="<%=request.getContextPath()%>/backend/assets/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="<%=request.getContextPath()%>/backend/assets/js/custom.min.js"></script>
+	<script src="<%=request.getContextPath()%>/backend/assets/js/deznav-init.js"></script>
+	<script src="<%=request.getContextPath()%>/backend/assets/js/demo.js"></script>
+	<script src="<%=request.getContextPath()%>/backend/assets/js/styleSwitcher.js"></script>
+	<script src="<%=request.getContextPath()%>/backend/assets/js/jquery.twzipcode.min.js"></script>
+	<!-- flatpickr datepicker CSS -->
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+	

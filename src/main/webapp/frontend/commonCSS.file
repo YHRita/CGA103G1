@@ -1,0 +1,14 @@
+  <%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
+
+    <!-- Touch Icons -->
+    <link href="<%=request.getContextPath()%>/frontend/assets/imgs/logo.png" rel="shortcut icon" type="image/png" />
+    <link href="<%=request.getContextPath()%>/frontend/assets/imgs/logo.png" rel="apple-touch-icon" />
+    <link href="<%=request.getContextPath()%>/frontend/assets/imgs/logo.png" rel="apple-touch-icon" sizes="72x72" />
+    <link href="<%=request.getContextPath()%>/frontend/assets/imgs/logo.png" rel="apple-touch-icon" sizes="114x114" />
+    <link href="<%=request.getContextPath()%>/frontend/assets/imgs/logo.png" rel="apple-touch-icon" sizes="144x144" />
+
+    <!-- Bootstrap CSS -->
+    <link href="<%=request.getContextPath()%>/frontend/assets/css/style.css" type="text/css" rel="stylesheet" />
+    <link href="<%=request.getContextPath()%>/frontend/assets/css/bootstrap-datepicker.css" rel="stylesheet"/>
+    <link href="<%=request.getContextPath()%>/frontend/assets/fontawesome-free-6.1.2-web/css/all.css" rel="stylesheet">
+

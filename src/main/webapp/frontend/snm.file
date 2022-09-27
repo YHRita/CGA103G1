@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ page import="java.util.*"%>
+<%@ page import="com.system_notification_message.model.*"%>
+
+
+	<dialog open id="infoModal" >
+	<h2>系統訊息<button id="close" >X</button></h2>
+	<div>${snm.msg}</div>
+	<img
+		src="<%=request.getContextPath()%>/snm?msg_no=${snm.msg_no}&action=getpic">
+	</dialog>
+	
+	<script type="text/javascript">
+	let close=document.querySelector("#close");
+	close.addEventListener("click", function(){
+	  infoModal.close();
+	})
+	</script>

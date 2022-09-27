@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
+
+    <section
+      class="p-0 height-700 parallax-bg"
+      style="
+        background: url(<%=request.getContextPath()%>/frontend/imgs/airplane.jpg) no-repeat 65% 0%;
+        background-size: cover;
+      "
+    >
+      <div class="container h-100">
+        <div class="row justify-content-between align-items-center h-100">
+          <div class="col-md-8 mb-7">
+            <h4>永遠不停止腳步!</h4>
+            <h1 class="display-4 font-weight-bold">創造美好回憶</h1>
+          </div>
+        </div>
+      </div>
+    </section>

@@ -1,0 +1,149 @@
+ <%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
+ 
+ <!-- 圖片 -->
+  <div class="innerpage-banner left py-7" style="background:url(https://i.imgur.com/wYzrG5n.jpg) repeat; background-size:cover; background-position: center;">
+    <div class="container">
+      <div class="row all-text-white">
+        <div class="col-md-12 align-self-center">
+          <h1 class="innerpage-title text-dark">廠商會員中心</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主內容 start -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3">
+        <!-- h5 改 h3 -->
+        <h3 class="mt-5 mb-3">會員功能選單</h3>
+        <div class="accordion" id="accordion1">
+          <!-- item -->
+          <div class="accordion-item">
+            <div class="accordion-title">
+              <a class="h6 mb-0" data-toggle="collapse" href="#collapse-1">
+                基本資料維護
+              </a>
+            </div>
+            <div class="collapse show" id="collapse-1" data-parent="#accordion1">
+              <!-- 這邊有加 flex-column align-items-start 讓按鈕垂直排列靠左 因為註解調不需要的欄位也會跑版 -->
+              <div class="accordion-content d-flex flex-column align-items-start">
+                <button type="button" class="btn" onclick="window.location.href='<%=request.getContextPath()%>/frontend/store/storeListOwn.jsp';">
+                  資料修改
+                </button>
+                <button type="button" class="btn" onclick="window.location.href='<%=request.getContextPath()%>/frontend/store/rmMsgList.jsp';">
+                  檢舉管理
+                </button>
+
+              </div>
+            </div>
+          </div>
+          <!-- item -->
+          <div class="accordion-item">
+            <div class="accordion-title">
+              <a class="collapsed" data-toggle="collapse" href="#collapse-2">
+                民宿管理
+              </a>
+            </div>
+            <div class="collapse" id="collapse-2" data-parent="#accordion1">
+              <!-- 這邊有加 flex-column align-items-start 讓按鈕垂直排列靠左 因為註解調不需要的欄位也會跑版 -->
+              <div class="accordion-content d-flex flex-column align-items-start">
+                <button type="button" class="btn" onclick="window.location.href='<%=request.getContextPath()%>/frontend/room/addRmType_S.jsp';">
+                  房型上架
+                </button>
+                <button type="button" class="btn" onclick="window.location.href='<%=request.getContextPath()%>/frontend/room/rmWork.jsp';">
+                  房務管理
+                </button>
+				<button type="button" class="btn" onclick="window.location.href='<%=request.getContextPath()%>/frontend/store/listStoreOrder.jsp';">
+                  訂房訂單
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- item -->
+          <div class="accordion-item">
+            <div class="accordion-title">
+              <a class="collapsed" data-toggle="collapse" href="#collapse-3">
+                揪團活動管理
+              </a>
+            </div>
+            <div class="collapse" id="collapse-3" data-parent="#accordion1">
+              <!-- 這邊有加 flex-column align-items-start 讓按鈕垂直排列靠左 因為註解調不需要的欄位也會跑版 -->
+              <div class="accordion-content d-flex flex-column align-items-start">
+                <button type="button" class="btn">
+                  查詢揪團紀錄
+                </button>
+                <button type="button" class="btn">
+                  創建揪團活動
+                </button>
+                <button type="button" class="btn">
+                  修改揪團活動條件
+                </button>
+                <button type="button" class="btn">
+                  取消揪團活動
+                </button>
+                <button type="button" class="btn">
+                  審核活動參團者
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- item -->
+          <div class="accordion-item">
+            <div class="accordion-title">
+              <a class="collapsed" data-toggle="collapse" href="#collapse-4">
+                信用卡管理
+              </a>
+            </div>
+            <div class="collapse" id="collapse-4" data-parent="#accordion1">
+              <!-- 這邊有加 flex-column align-items-start 讓按鈕垂直排列靠左 因為註解調不需要的欄位也會跑版 -->
+              <div class="accordion-content d-flex flex-column align-items-start">
+                <button type="button" class="btn">
+                  新增信用卡
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- item -->
+          <div class="accordion-item">
+            <div class="accordion-title">
+              <a class="collapsed" data-toggle="collapse" href="#collapse-5">
+                會員訊息管理
+              </a>
+            </div>
+            <div class="collapse" id="collapse-5" data-parent="#accordion1">
+              <!-- 這邊有加 flex-column align-items-start 讓按鈕垂直排列靠左 因為註解調不需要的欄位也會跑版 -->
+              <div class="accordion-content d-flex flex-column align-items-start">
+                <button type="button" class="btn">
+                  會員訊息管理
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- item -->
+          <div class="accordion-item">
+            <div class="accordion-title">
+              <a class="collapsed" data-toggle="collapse" href="#collapse-6">
+                優惠券管理
+              </a>
+            </div>
+            <div class="collapse" id="collapse-6" data-parent="#accordion1">
+              <!-- 這邊有加 flex-column align-items-start 讓按鈕垂直排列靠左 因為註解調不需要的欄位也會跑版 -->
+              <div class="accordion-content d-flex flex-column align-items-start">
+              	<button type="button" class="btn">
+                  顯示所有優惠券
+                </button>
+                <button type="button" class="btn">
+                  已到期
+                </button>
+                <button type="button" class="btn">
+                  輸入優惠券號碼
+                </button>
+                <button type="button" class="btn">
+                  未使用
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

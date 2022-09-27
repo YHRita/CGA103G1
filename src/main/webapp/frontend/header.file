@@ -1,0 +1,239 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
+<%@ page import="com.system_notification_message.model.*"%>
+<%@ page import="java.util.*"%>
+<%
+SystemNotificationMessageService snmSvc = new SystemNotificationMessageService();
+List<SystemNotificationMessageVO> snm = snmSvc.getthree();
+pageContext.setAttribute("snm", snm);
+%>
+
+<head>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script></head>
+    <header class="header-static navbar-sticky navbar-light shadow">
+      <div class="navbar-top d-none d-lg-block">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+              <div class="dropdown">
+                <a
+                  class="dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="dropdownLanguage"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  中文
+                </a>
+                <div
+                  class="dropdown-menu mt-2 shadow"
+                  aria-labelledby="dropdownLanguage"
+                >
+                  <span class="dropdown-item-text">Select language</span>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#"> English</a>
+                </div>
+              </div>
+              <ul class="nav list-unstyled ml-3">
+                <li class="nav-item mr-3">
+                  <a class="navbar-link" href="#"
+                    ><strong>Phone:</strong> (03) 425 1108</a
+                  >
+                </li>
+                <li class="nav-item mr-3">
+                  <a class="navbar-link" href="#"
+                    ><strong>Email:</strong> Helper@Memory.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+			
+                  
+            <div class="d-flex align-items-center">
+              <div class="dropdown">
+                <a
+                  class="dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="dropdownAccount"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >
+                  <!--已登入顯現帳號 -->
+                  <c:if test="${memVO!=null}">
+               ${memVO.mem_name}
+               </c:if>
+                  <c:if test="${memVO==null}">帳戶
+                  </c:if>
+                  </a
+                >
+                <div
+                  class="dropdown-menu mt-2 shadow"
+                  aria-labelledby="dropdownAccount">
+                   <!--已登入不會出現會員登入按鈕 -->
+                  <c:if test="${memVO==null}">
+                  <a class="dropdown-item" href="<%=request.getContextPath()%>/frontend/signin/login.jsp">會員登入</a>
+                   </c:if>
+                  <a class="dropdown-item" href="signin/addMem.jsp">註冊</a>
+                  <c:if test ="${store_acc==null}">
+                  <a class="dropdown-item" href="<%=request.getContextPath()%>/frontend/store/storeLogin.jsp">廠商登入</a>
+                  </c:if>
+                  <a class="dropdown-item" href="<%=request.getContextPath()%>/frontend/store/StoreSignUp.jsp">廠商註冊</a>
+                  <a class="dropdown-item" href="<%=request.getContextPath()%>/frontend/mem/listMemOrder.jsp">會員中心</a>
+                  <c:if test="${memVO!=null}">
+                  <a class="dropdown-item" href="<%=request.getContextPath()%>/mem.do?action=log_out">會員登出</a>
+                   </c:if>
+                   <c:if test="${store_acc!=null}">
+                  <a class="dropdown-item" href="<%=request.getContextPath()%>/store.do?action=logOut">廠商登出</a>
+                   </c:if>
+                </div>
+              </div>
+            
+            <div class="d-flex align-items-center">
+              <div class="dropdown">
+                <a
+                  class="dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="dropdownAccount"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >系統訊息</a
+                >
+                <div class="snmblur">
+                <div
+                  class="dropdown-menu mt-2 shadow"
+                  aria-labelledby="dropdownAccount"
+                >
+              <c:forEach var="snm" items="${snm}">
+               <div>${snm.msg}</div>
+	<img
+		src="<%=request.getContextPath()%>/snm?msg_no=${snm.msg_no}&action=getpic">
+                   </c:forEach>
+                   </div>
+              </div>
+              </div>
+            
+            
+              <ul class="social-icons">
+                <li class="social-icons-item social-facebook m-0">
+                  <a class="social-icons-link w-auto px-2" href="#"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li class="social-icons-item social-instagram m-0">
+                  <a class="social-icons-link w-auto px-2" href="#"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                </li>
+                <li class="social-icons-item social-twitter m-0">
+                  <a class="social-icons-link w-auto pl-2" href="#"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navbar top End-->
+
+      <!-- Logo Nav Start -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+          <a class="navbar-brand" href="<%=request.getContextPath()%>/frontend/homePage.jsp">
+            <img src="<%=request.getContextPath()%>/frontend/imgs/logo.png" width="75px" height="75px" alt="MEMORY" />
+            MEMORY 美陌旅
+          </a>
+
+          <button
+            class="navbar-toggler ml-auto"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"> </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+            
+              <li class="nav-item">
+                <a
+                  class="nav-link "
+                  href="<%=request.getContextPath()%>/frontend/room/listAllRmType.jsp"
+                  id="docMenu"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >線上訂房 Room</a
+                >
+             
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link "
+                  href="<%=request.getContextPath()%>/frontend/tkt/tktShopList.jsp"
+                  id="docMenu"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >票券商城</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="<%=request.getContextPath()%>/frontend/act/actSearchListPage2.jsp"
+                  id="docMenu"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >揪團活動</a
+                >       
+              </li>
+
+              <li class="nav-item dropdown">
+               <a
+                  class="nav-link"
+                  href="<%=request.getContextPath()%>/frontend/ac/acCardPage.jsp"
+                  id="docMenu"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >討論區</a
+                >       
+              </li>
+              <li class="nav-item dropdown">
+              </li>
+
+              <li class="nav-item dropdown megamenu">
+             
+              </li>
+
+              <li class="nav-item dropdown megamenu">
+              
+              </li>
+            </ul>
+          </div>
+
+          <div class="navbar-nav">
+            <div class="nav-item search border-0 pl-3 pr-0 px-lg-2" id="search">
+             
+            </div>
+            <div id="message"
+              class="nav-item border-0 d-none d-lg-inline-block align-self-center"
+            >
+              <a href="<%=request.getContextPath()%>/frontend/customer_service/frontChat.jsp" class="btn btn-sm btn-grad text-white mb-0"
+                >即時客服</a
+              >
+            </div>
+            
+          </div>
+        </div>
+      </nav>
+    </header>
+    
