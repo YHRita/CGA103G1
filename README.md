@@ -17,7 +17,9 @@
 - JDBC
 - Servlet / JSP
 - JavaScript
+- Ajax
 - HTML / CSS
+- Bootstracp
 
 :pushpin:  [專題負責項目 PDF 介紹](https://drive.google.com/file/d/1Hi76ELpkAVJ6ubyuMBKfOqj_Ve1Mimsi/view?usp=sharing) <br>
 :pushpin:  [專題負責項目 影片 介紹](https://youtu.be/L4H-SGi3JmM)
